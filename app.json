@@ -1,6 +1,6 @@
 {
   "expo": {
-    "name": "brokoto",
+    "name": "Brokoto",
     "slug": "brokoto",
     "version": "1.0.0",
     "orientation": "portrait",
@@ -13,7 +13,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FBF6EE"
-      }
+      },
+      "package": "com.beepeelabs.brokoto"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -21,6 +22,11 @@
     "plugins": [
       "expo-font",
       "expo-status-bar"
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "dc58482d-6660-484f-9b96-6a42217800e0"
+      }
+    }
   }
 }
