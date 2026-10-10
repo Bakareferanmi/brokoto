@@ -6,7 +6,7 @@ const JOLLOF = ['#E8662E', '#D8501F', '#F0883F'];
 
 // The flat plate illustration from the design. `spin` slowly rotates it
 // (small garnish dots make the rotation visible).
-export default function Plate({ size = 150, colors: pc = JOLLOF, spin = false }) {
+export default function Plate({ size = 150, colors: pc = JOLLOF, spin = false, dotColor = colors.green }) {
   const rot = useRef(new Animated.Value(0)).current;
   useEffect(() => {
     if (!spin) return undefined;
@@ -68,7 +68,7 @@ export default function Plate({ size = 150, colors: pc = JOLLOF, spin = false })
                   width: dot,
                   height: dot,
                   borderRadius: dot / 2,
-                  backgroundColor: colors.green,
+                  backgroundColor: dotColor,
                   transform: [{ translateX: Math.cos(a) * r }, { translateY: Math.sin(a) * r }],
                 }}
               />

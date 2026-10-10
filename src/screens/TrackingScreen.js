@@ -14,7 +14,7 @@ import { CONTENT_W, SCREEN_W, sp, wrap } from '../layout';
 const START_MIN = 18;
 // Demo: one "minute" passes every 4 seconds so you can watch the whole journey.
 const TICK_MS = 4000;
-const RIDER_NAME = '[RIDER NAME]';
+const RIDER_NAME = 'Feranmi';
 
 // Route and map furniture in design coordinates (390 x 330).
 const ROUTE = [

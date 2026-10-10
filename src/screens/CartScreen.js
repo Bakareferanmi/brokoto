@@ -123,7 +123,7 @@ export default function CartScreen({ navigation }) {
           </View>
         ) : items.length === 0 ? (
           <FadeInUp style={styles.emptyWrap}>
-            <Plate size={sp(120)} spin />
+            <Plate size={sp(120)} spin colors={['#702BDD', '#5A1FB8', '#8E55E8']} dotColor="#EEE6FC" />
             <Text style={styles.emptyTitle}>Your cart is empty</Text>
             <ScalePress onPress={() => navigation.navigate('Home')} accessibilityRole="button" style={styles.emptyBtn}>
               <Text style={styles.emptyBtnText}>Browse restaurants</Text>

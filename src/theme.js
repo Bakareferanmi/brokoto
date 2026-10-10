@@ -19,11 +19,11 @@ export const colors = {
 
 // Lighter weights for a cleaner, less chunky look.
 export const fonts = {
-  display: 'BricolageGrotesque_700Bold',
-  displayBold: 'BricolageGrotesque_700Bold',
-  body: 'DMSans_400Regular',
-  bodyMedium: 'DMSans_500Medium',
-  bodyBold: 'DMSans_700Bold',
+  display: 'Poppins_600SemiBold',
+  displayBold: 'Poppins_600SemiBold',
+  body: 'Poppins_400Regular',
+  bodyMedium: 'Poppins_500Medium',
+  bodyBold: 'Poppins_600SemiBold',
 };
 
 export const naira = (n) =>
