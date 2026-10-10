@@ -1,5 +1,5 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { Animated, Easing, StyleSheet, Text, View } from 'react-native';
+import { Animated, Easing, ScrollView, StyleSheet, Text, View } from 'react-native';
 import Feather from '../components/Icon';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
@@ -228,7 +228,7 @@ export default function TrackingScreen({ navigation }) {
   const mapH = MAP_H;
 
   return (
-    <View style={styles.root}>
+    <ScrollView style={styles.root} contentContainerStyle={{ paddingBottom: sp(24) }} showsVerticalScrollIndicator={false}>
       <View>
         {mapLoading ? <Skeleton height={mapH} radius={0} /> : <RouteMap navigation={navigation} progress={progress} top={insets.top} />}
       </View>
@@ -268,14 +268,14 @@ export default function TrackingScreen({ navigation }) {
           </ScalePress>
         </FadeInUp>
       </View>
-    </View>
+    </ScrollView>
   );
 }
 
 const styles = StyleSheet.create({
   root: { flex: 1, backgroundColor: colors.bg },
   back: { width: sp(40), height: sp(40), borderRadius: sp(20), backgroundColor: colors.bg, alignItems: 'center', justifyContent: 'center' },
-  sheet: { flex: 1, marginTop: -sp(22), backgroundColor: colors.bg, borderTopLeftRadius: sp(24), borderTopRightRadius: sp(24), paddingHorizontal: sp(20), paddingTop: sp(20), gap: sp(14) },
+  sheet: { marginTop: -sp(22), backgroundColor: colors.bg, borderTopLeftRadius: sp(24), borderTopRightRadius: sp(24), paddingHorizontal: sp(20), paddingTop: sp(20), gap: sp(14) },
   etaRow: { flexDirection: 'row', alignItems: 'flex-end', justifyContent: 'space-between' },
   eyebrow: { fontFamily: fonts.bodyMedium, fontSize: sp(11), letterSpacing: 0.6, color: colors.muted },
   eta: { fontFamily: fonts.display, fontSize: sp(30), lineHeight: sp(34), letterSpacing: -0.5, color: colors.ink },
@@ -284,7 +284,7 @@ const styles = StyleSheet.create({
   dot: { width: 20, height: 20, borderRadius: 10, backgroundColor: '#fff', alignItems: 'center', justifyContent: 'center' },
   line: { flex: 1, width: 2, minHeight: 10, backgroundColor: colors.dash, marginVertical: 2, overflow: 'hidden' },
   sub: { fontFamily: fonts.body, fontSize: sp(12), color: colors.muted },
-  rider: { flexDirection: 'row', alignItems: 'center', gap: sp(12), padding: sp(10), paddingHorizontal: sp(12), backgroundColor: '#fff', borderRadius: sp(16), borderWidth: 1, borderColor: colors.line, marginTop: 'auto', marginBottom: sp(16) },
+  rider: { flexDirection: 'row', alignItems: 'center', gap: sp(12), padding: sp(10), paddingHorizontal: sp(12), backgroundColor: '#fff', borderRadius: sp(16), borderWidth: 1, borderColor: colors.line, marginTop: sp(8), marginBottom: sp(8) },
   avatar: { width: sp(42), height: sp(42), borderRadius: sp(21), backgroundColor: colors.sand, alignItems: 'center', justifyContent: 'center' },
   riderName: { fontFamily: fonts.bodyBold, fontSize: sp(14.5), color: colors.ink },
   round: { width: sp(40), height: sp(40), borderRadius: sp(20), alignItems: 'center', justifyContent: 'center' },
